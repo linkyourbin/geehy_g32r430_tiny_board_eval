@@ -1,0 +1,21 @@
+pub use crate::hal::{
+    Parts,
+    adc::{Adc12Channel, Adc12SampleTime, Adc16Channel, Adc16SampleTime},
+    clocks::{Clocks, init_128mhz},
+    delay::{Delay, enable_cycle_counter},
+    gpio::{Alternate, Analog, Gpio, Input, Output, OutputType, Pin, Pull, Speed},
+    i2c::I2c1,
+    pwm::{Mode as PwmMode, Tmr2Pwm, Tmr3Pwm, Tmr4Pwm},
+    spi::Spi1,
+    tmr::{
+        Tmr1ComplementaryPwm, Tmr1ComplementaryPwmBuilder, TmrBreakDeadTimeConfig,
+        TmrCapturePolarity, TmrChannel, TmrClockDivision, TmrCounterMode,
+        TmrDmaBurstBase, TmrDmaRequest, TmrError, TmrEvent,
+        TmrExternalTriggerPrescaler, TmrFlag, TmrHallSensorConfig, TmrIdleState,
+        TmrInputCaptureConfig, TmrInputPrescaler, TmrInputSelection, TmrInterrupt,
+        TmrLockLevel, TmrMasterMode, TmrOutputCompareConfig, TmrOutputCompareMode,
+        TmrPolarity, TmrSlaveConfig, TmrSlaveMode, TmrTimeBase, TmrTriggerSource,
+        TmrUpdateRequestSource,
+    },
+    uart::{Usart1, Usart2},
+};

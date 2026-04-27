@@ -1,0 +1,200 @@
+name: G32R4 Series
+generated_from_pack: true
+pack_file_release: 1.0.2
+variants:
+- name: G32R430CB
+  cores:
+  - name: main
+    type: armv8m
+    core_access_options: !Arm
+      ap: !v2 0x0
+  memory_map:
+  - !Ram
+    name: IRAM2
+    range:
+      start: 0x0
+      end: 0x8000
+    cores:
+    - main
+    access:
+      execute: true
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8020000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+    access:
+      execute: true
+  flash_algorithms:
+  - g32r430_128
+  - g32r430_opt
+- name: G32R430KB
+  cores:
+  - name: main
+    type: armv8m
+    core_access_options: !Arm
+      ap: !v2 0x0
+  memory_map:
+  - !Ram
+    name: IRAM2
+    range:
+      start: 0x0
+      end: 0x8000
+    cores:
+    - main
+    access:
+      execute: true
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8020000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+    access:
+      execute: true
+  flash_algorithms:
+  - g32r430_128
+  - g32r430_opt
+- name: G32R430RB
+  cores:
+  - name: main
+    type: armv8m
+    core_access_options: !Arm
+      ap: !v2 0x0
+  memory_map:
+  - !Ram
+    name: IRAM2
+    range:
+      start: 0x0
+      end: 0x8000
+    cores:
+    - main
+    access:
+      execute: true
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8020000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+    access:
+      execute: true
+  flash_algorithms:
+  - g32r430_128
+  - g32r430_opt
+- name: G32R430UB
+  cores:
+  - name: main
+    type: armv8m
+    core_access_options: !Arm
+      ap: !v2 0x0
+  memory_map:
+  - !Ram
+    name: IRAM2
+    range:
+      start: 0x0
+      end: 0x8000
+    cores:
+    - main
+    access:
+      execute: true
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8020000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+    access:
+      execute: true
+  flash_algorithms:
+  - g32r430_128
+  - g32r430_opt
+flash_algorithms:
+- name: g32r430_128
+  description: G32R430 128KB Flash
+  default: true
+  instructions: ICgC00AJAB1wRxAoAtMACcAccEeACHBHELWaSJhJAWABaMkD/NVBaAEiEUNBYEFoiQf81ZRJC2kbCRsBC2ELaQQkI0MLYUFoowOZQ0Fgj0mBYEFoGUNBYEFoiQf81QIhwWABaRFDAWEBaQkH/NUBaUkISQABYRC9gkiBSQFgACHBYAFpASIRQwFhAWkJB/zVAWlJCEkAAWFBaAEjGwSZQ0FgAmB4SAFpCQkJAQFhAWkBYXBHALUBIHNJQASIYP/32/8AIAC9eLVxTW9LAJXYaAwhCEPYYNhoASQgQ9hgbUgZBAhgbEltSgTgEWAAmEYeAJYJ05hoQAf31ACVBuARYACYRR4AlQHSASB4vZhowAf10JxgACB4vXi1HyHJBmBKW01BGACVkUIB0wAgeL1WStFoDCOZQ9Fg0WgBIxlD0WBUSQFgVElVTATgIWAAmEYeAJYJ05BoQAf31ACVBuAhYACYRR4AlQHSASB4vZBowAf10JNg2ef4tUVLAJMfI4kI2wZHTIkAwxhDTUROPk+jQgPSL+AIygjACR8AKfrRK+D7aAIkI0P7YBNoA2A4SwCTBOA1YACbXB4AlBHTu2hbB/fUu2ibBlsPAtA4ILhgB+AvSwCTBuA1YACbXB4AlAHSASD4vbtomwf11QIju2AAHQkfEh0AKdPRACD4vTi1JEwhSQCUCGolSsAFBdQlSBBgBiBQYCRIkGAIasCyqigi0CJISGAiSEhgG0sE4BNgAJhFHgCVENOIaEAD99UdSIhiiGoBJS0GKEOIYgCUBuATYACYRB4AlAHSASA4vYhqwAH11BVIyGABIIAEiGATSAhgE0gIYDggiGD/987+ACA4veSHAAAABAJAAAgCQAIAFAAgoQcApaUAAKqqAAAAJABAAQACAFVVAAD/DwAAu7uqqndmVUSqg/8AAIClpZaWlpY8PDw8AAAAAA==
+  pc_init: 0x1fd
+  pc_uninit: 0xb5
+  pc_program_page: 0x177
+  pc_erase_sector: 0x119
+  pc_erase_all: 0xc7
+  data_section_offset: 0x2c4
+  rtt_poll_interval: 0
+  flash_properties:
+    address_range:
+      start: 0x8000000
+      end: 0x8020000
+    page_size: 0x200
+    erased_byte_value: 0xff
+    program_page_timeout: 1000
+    erase_sector_timeout: 6000
+    sectors:
+    - size: 0x200
+      address: 0x0
+- name: g32r430_opt
+  description: G32R430 Flash Options
+  instructions: GLUnSCdLAJAYaidMwAUF1CZIIGAGIGBgJUigYCVIWGAlSFhgJUkG4CFgAJhCHgCSAdIBIBi9mGhAA/XVACAYvQEgGEmABIhgACBwRwAgcEcAIHBHOLUSSACQEHmTeAUEGAcUeAANEXoFQ5J6JUMNSxACCEOdYthimGoBIQkGCEOYYg5JCEwG4CFgAJhCHgCSAdIBIDi9mGrAAfXUACA4vSChBwAACAJAACQAQFVVAAD/DwAAu7uqqndmVUSqqgAAAAAAAA==
+  pc_init: 0x1
+  pc_uninit: 0x41
+  pc_program_page: 0x55
+  pc_erase_sector: 0x51
+  pc_erase_all: 0x4d
+  data_section_offset: 0xc0
+  rtt_poll_interval: 0
+  flash_properties:
+    address_range:
+      start: 0x1fff0000
+      end: 0x1fff000c
+    page_size: 0xc
+    erased_byte_value: 0xff
+    program_page_timeout: 3000
+    erase_sector_timeout: 3000
+    sectors:
+    - size: 0xc
+      address: 0x0

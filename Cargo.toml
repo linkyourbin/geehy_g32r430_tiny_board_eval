@@ -1,0 +1,18 @@
+[package]
+name = "g32r430-hal-examples"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+apmg32r430xx_pac = { path = "apmg32r430xx_pac", features = ["critical-section", "rt"] }
+cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
+cortex-m-rt = "0.7.5"
+display-interface-i2c = "0.5.0"
+embedded-graphics = "0.8.2"
+embedded-hal = "1.0.0"
+embedded-hal-nb = "1.0.0"
+embedded-io = "0.7.1"
+panic-halt = "1.0.0"
+rtt-target = "0.6.2"
+sh110x = { git = "https://github.com/linkyourbin/sh110x", version = "0.1.0" }
+ssd1306 = "0.10.0"

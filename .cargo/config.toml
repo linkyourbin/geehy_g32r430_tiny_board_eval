@@ -1,0 +1,22 @@
+[build]
+target = "thumbv8m.main-none-eabi"
+
+[target.thumbv8m.main-none-eabi]
+# runner = "probe-rs run --chip STM32F103C8"
+runner = [
+    "probe-rs",
+    "run",
+    "--chip",
+    "G32R430CB",
+   "--chip-description-path",
+   "G32R4_Series.yaml",
+    "--protocol",
+    "swd",
+    "--log-format",
+    "{t} {L} {fff}:{l} {s}",
+]
+
+rustflags = [
+    "-C", "link-arg=-Tlink.x",
+    "-C", "linker=flip-link"
+]
